@@ -1,0 +1,35 @@
+import java.util.*;
+class Arrayss{
+	int id;
+	String name;
+	public Arrayss(int aid,String aname) {
+		// TODO Auto-generated constructor stub
+		id=aid;
+		name=aname;
+	}
+	public String toString()
+	{
+		return "[id=" +id+",name="+name+"]";
+	}
+}
+public class Ex1 {
+	ArrayList getvalues(HashMap mp)
+	{
+		Collection values=mp.values();
+		ArrayList lists=new ArrayList(values);
+		return lists;
+	}
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		Ex1 e=new Ex1();
+		Arrayss e1=new Arrayss(12, "Kishore");
+		Arrayss e2=new Arrayss(13, "Kumaar");
+		Arrayss e3=new Arrayss(11, "Bala");
+		HashMap<Integer,Arrayss> hm=new HashMap<Integer,Arrayss>();
+		hm.put(1, e1);
+		hm.put(2, e2);
+		hm.put(3, e3);
+		System.out.println(e.getvalues(hm));
+		s.close();
+	}
+}
